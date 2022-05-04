@@ -30,3 +30,4 @@ jobs:
        jfrog rt c show
        jfrog rt go-publish
        jfrog rt u "public/" default-npm-local
+       
