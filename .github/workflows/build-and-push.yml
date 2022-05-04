@@ -21,9 +21,8 @@ jobs:
     needs: build
     steps:
     - name: login to jfrog
-      uses: jfrog/setup-jfrog-cli@v2
+      uses: jfrog/setup-jfrog-cli@v1
       env:
-        username: 'nodetest'
         ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}
     - run: |
        jfrog --version
