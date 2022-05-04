@@ -23,5 +23,5 @@ jobs:
             npm config set registry https://devopslv.jfrog.io/artifactory/default-npm-virtual/
             npm publish
             jfrog config add artifact --url=https://devopslv.jfrog.io/artifactory/default-npm-virtual/
-            jfrog rt u "webpack artifacts" default-npm-remote
+            jfrog rt u "public" default-npm-remote
  
