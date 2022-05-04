@@ -16,7 +16,7 @@ jobs:
           name: webpack artifacts
           path: public/ 
       - name: login to jfrog
-        uses: jfrog/setup-jfrog-cli@v1
+        uses: jfrog/setup-jfrog-cli@v2
         env:
           ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}
       - run: |
