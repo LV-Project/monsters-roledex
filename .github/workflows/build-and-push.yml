@@ -20,11 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: pushing to jfrog
-        uses: jfrog/setup-jfrog-cli@v1
-        env:
-          ARTIFACTORY_TOKEN_REF: ${{ secrets.ARTIFACTORY_TOKEN}}
-      - run: |
-          jfrog rt dl artifacts/
-          jfrog rt u aether artifacts/
-          jfrog rt bp
+    - uses: jfrog/setup-jfrog-cli@v2
+      env:
+        JF_ENV_1: ${{ secrets.ARTIFACTORY_TOKEN }}
+    - run: |
+       # Ping the server
+        jf rt ping
