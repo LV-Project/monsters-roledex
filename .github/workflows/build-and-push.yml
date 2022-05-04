@@ -26,4 +26,4 @@ jobs:
         ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}
     - run: |
        jfrog --version
-       jf rt u "public/" default-npm-local
+       jfrog rt u "public/" default-npm-local
