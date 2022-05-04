@@ -21,7 +21,7 @@ jobs:
           ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}
       - run: |
          jfrog --version
-         jfrog config add default-npm-remote --artifactory-url=https://registry.npmjs.org
+         jfrog config add default-npm-virtual --artifactory-url=https://devopslv.jfrog.io/artifactory/default-npm-virtual/
          jfrog rt u "public/" default-npm-local
    
        
