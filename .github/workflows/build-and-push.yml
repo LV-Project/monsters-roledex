@@ -18,9 +18,9 @@ jobs:
           
   push:
     runs-on: ubuntu-latest
-    needs: build
+#    needs: build
     steps:
-    - uses: jfrog/setup-jfrog-cli@v2
+    - uses: jfrog/setup-jfrog-cli@v1
       env:
         JF_ENV_1: ${{ secrets.ARTIFACTORY_TOKEN }}
     - run: |
