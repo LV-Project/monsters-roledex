@@ -21,10 +21,10 @@ jobs:
     needs: build
     steps:
     - name: login to jfrog
-      uses: jfrog/setup-jfrog-cli@v1
-      with:
+      uses: jfrog/setup-jfrog-cli@v2
+      env:
         username: 'nodetest'
-        password: ${{ secrets.ARTIFACTORY_TOKEN }}
+        ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}
     - run: |
        jfrog --version
        jf rt u "public/" default-npm-local
