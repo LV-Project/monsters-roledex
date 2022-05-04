@@ -20,8 +20,8 @@ jobs:
         env:
           ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}
           run: |
-            npm config set registry https://devopslv.jfrog.io/artifactory/default-npm-virtual/
+            npm config set registry https://devopslv.jfrog.io/artifactory/default-npm-virtual/api/npm
             npm publish
-            jfrog config add artifact --url=https://devopslv.jfrog.io/artifactory/default-npm-virtual/
+            jfrog config add artifact --url=https://devopslv.jfrog.io/artifactory/default-npm-virtual/api/npm
             jfrog rt u "public" default-npm-remote
  
