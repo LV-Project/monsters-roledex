@@ -23,7 +23,7 @@ jobs:
       - name: pushing to jfrog
         uses: jfrog/setup-jfrog-cli@v1
         env:
-          ARTIFACTORY_TOKEN_REF: ${{ ARTIFACTORY_TOKEN}}
+          ARTIFACTORY_TOKEN_REF: ${{ secrets.ARTIFACTORY_TOKEN}}
       - run: |
           jfrog rt dl artifacts/
           jfrog rt u aether artifacts/
