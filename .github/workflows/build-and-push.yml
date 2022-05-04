@@ -26,5 +26,4 @@ jobs:
         username: 'nodetest'
         password: ${{ secrets.ARTIFACTORY_TOKEN }}
     - run: |
-       # Ping the server
-        jf rt ping
+       jfrog --version
