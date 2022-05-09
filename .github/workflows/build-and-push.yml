@@ -18,11 +18,11 @@ jobs:
       - name: publish to jfrog
         run: |
           npm config set registry https://devopslv.jfrog.io/artifactory/api/npm/default-npm-virtual/
-          npm publish
+          npm publish 2
         
         
         #uses: jfrog/setup-jfrog-cli@v1
-        #env:
+        #env
         #  ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}
         #  API_KEY_NPM_JFROG: ${{secrets.API_KEY_NPM_JFROG}}
         #  run: |
